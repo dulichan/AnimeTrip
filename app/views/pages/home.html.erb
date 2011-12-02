@@ -1,26 +1,7 @@
-<div class="topbar">
-  <div class="fill">
-    <div class="container">
-      <a class="brand" href="#">AnimeTrip</a>
-      <ul class="nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <form action="" class="pull-right">
-        <input class="input-small" type="text" placeholder="Username">
-        <input class="input-small" type="password" placeholder="Password">
-        <button class="btn" type="submit">Sign in</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-
   <div class="content">
     <div class="page-header">
-      <h1>AnimeTrip <small>Discovering Anime and Manga for your Tastes </small></h1>
+      <h1>AnimeTrip <small>Discovering Anime and Manga for your Tastes </small><button class="btn primary">Login with Twitter</button></h1>
+
     </div>
     <div class="row">
       <div class="span10 conmain">
@@ -39,43 +20,64 @@
         </div>
         <div class="span10">
           <h2>Here is a quick overview of features - </h2>
-          <div class="span9">
-          <span class="row">
-            <h3>Discovering Anime and Manga with a button click </h3>
-            <p>Once you have added your tastes and to AT, you just got to press one button and poff you get manga - Too good to be true...</p>
-          </span>
-          <span class="row">
-            <h3>Maintaining a list - To-watch list , To-read list, Already-watched list and so on </h3>
-            <p>You can maintain your lists while reading the manga with the help of the toolbar so you won't have to visit else where to update your manga list.</p>
-          </span>
-          <span class="row">
-            <h3>Maintaining your own library of Anime and Manga</h3>
-            <p>If you like to re-read certain series and rewatch episodes add them to the library and you can find it easily</p>
-          </span>
-          <span class="row">
-            <h3>Adding new Content for other Otakus</h3>
-            <p>Do a favor by adding stuff you found enjoying so that AnimeTrip stays Human -not Automatic...</p>
-          </span>
-          <span class="row">
-            <h3>and more to come</h3>
-          </span>
-          <span class="row">
-            <p>While you are using it mind to drop me a comment.</p>
-          </span>
-          <span class="row">
-            <p>And for all the Github folks the Repo is there to be forked so please help me improve AnimeTrip.</p>
-          </span>
+          <div class="row">
+            <div class="box orange" data-content="Once you have added your tastes and to AT, you just got to press one button and poff you get manga - Too good to be true..." >
+              <%= image_tag("click.png", :alt =>"Discover with a Click") %>
+              <span>Discovering Anime and Manga with a button click </span>
+            </div>
+            <div class="box pink" data-content="You can maintain your lists while reading the manga with the help of the toolbar so you won't have to visit else where to update your manga list">
+            <%= image_tag("list.png", :alt => "Keep a list") %>
+              <span>Maintaining a list </span>
+            </div>
+            <div class="box purple" data-content="If you like to re-read certain series and rewatch episodes add them to the library and you can find it easily">
+            <%= image_tag("library.png", :alt => "Keep Library")%>
+              <span>Maintaining your own library</span>
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn primary">Login with Twitter</button>
+          </div>
+
+          <div class="row">
+            <p>
+              and more to come. While you are using it mind to drop me a comment. And for all the Github folks the Repo is there to be forked so please help me improve AnimeTrip.
+            </p>
           </div>
         </div>
       </div>
-      <div class="span4 main">
-        <h3>Secondary content</h3>
+      <div class="span5 main">
+        <h3>People talking about AnimeTrip</h3>
+        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'search',
+          search: 'AnimeTrip',
+          interval: 30000,
+          title: 'People Talking about AnimeTrip',
+          subject: 'AnimeTrip',
+          width: 280,
+          height: 300,
+          theme: {
+            shell: {
+              background: '#700a03',
+              color: '#ffffff'
+            },
+            tweets: {
+              background: '#feecea',
+              color: '#444444',
+              links: '#6b83e3'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: true,
+            live: true,
+            behavior: 'default'
+          }
+        }).render().start();
+        </script>
       </div>
     </div>
   </div>
 
-  <footer>
-    <p>by <a href="http://twitter.com/dulitharw"> Duli-chan ^^</a></p>
-  </footer>
-
-</div> <!-- /container -->

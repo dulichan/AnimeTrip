@@ -6,12 +6,30 @@
   <%= stylesheet_link_tag    "bootstrap" %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Jura" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "less-1.1.5.min.js" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="#">AnimeTrip</a>
+      <ul class="nav">
+        <li class="active"><%= link_to "Home" "#" %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact",  "#" %></li>
+      </ul>
+      <form action="" class="pull-right">
+        <button class="btn" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
 <%= yield %>
+  <footer>
+    <p>by <a href="http://twitter.com/dulitharw"> Duli-chan ^^</a></p>
+  </footer>
 
+</div> <!-- /container -->
 </body>
 </html>
